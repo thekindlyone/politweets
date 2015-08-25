@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+          <div class="inner cover">
+            <h2 class="cover-heading">Sentiment Analysis of Indian Politics Tweets</h1>
+            <p class="lead">
+              <form id="searchform">
+                <div class="form-group" >
+                  <input type="text" class="form-control" id="termbox" placeholder="Enter Search Terms eg. BJP" name="term" >
+                </div>
+                <button class="btn btn-default" id="button" type="submit">Search</button>
+              </form>
+            </p>           
+              <div class="chart_container">
+                <!-- {{ chart | safe}}                 -->
+              </div>
+            
+          </div>
+
+
+{% endblock %}
