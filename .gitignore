@@ -2,3 +2,4 @@
 twitter_creds.py
 /env
 /guess_language
+/aggregator/logs

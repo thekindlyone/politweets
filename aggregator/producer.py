@@ -4,6 +4,8 @@ import httplib
 from utils import *
 import sys
 from logwriter import *
+import time
+
 logger=logWriter('producer')
 
 class MyStreamer(TwythonStreamer):
