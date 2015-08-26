@@ -13,3 +13,7 @@ The pie chart itself is plotted with [python-nvd3][nvd3]
 [textbloblink]: https://github.com/sloria/TextBlob
 
 [elasticsearchlink]: https://elasticsearch-py.readthedocs.org/en/master/
+
+[flasklink]: http://flask.pocoo.org/
+
+[nvd3]: https://github.com/areski/python-nvd3
