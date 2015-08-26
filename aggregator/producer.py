@@ -29,7 +29,7 @@ class MyStreamer(TwythonStreamer):
                 'tags':tags,
                 'urls':urls
             }
-            if check_english(payload['text']):
+            if check_english(payload['text']) and not payload['retweet']:
                 report=self.sqs.send(payload)
                 logger.write(u'{} - {}...\n'.format(data['user']['screen_name'],data["text"][:30]).encode('utf-8'))
             else:
@@ -51,8 +51,8 @@ def connectAndStream(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET):
     logger.write('Connecting')
     sqs= Q()
     stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET,sqs)
-    tags = ["BJP","Narendra Modi","Modi","PM Modi","Modiji",'Aam Aadmi Party','Arvind Kejriwal','Rahul Gandhi','Mulayam Singh Yadav','Akhilesh Yadav']
-    follows=["@ArvindKejriwal","@narendramodi","@BJP4India","@INCIndia","@OfficeOfRG","@AamAadmiParty","@BSP4India","@yadavakhilesh",'@laluprasadrjd','@NitishKumar']
+    tags = ["BJP","Narendra Modi","Modi","PM Modi","Modiji",'Aam Aadmi Party','Arvind Kejriwal','Rahul Gandhi','Mulayam Singh Yadav','Akhilesh Yadav',
+    "ArvindKejriwal","narendramodi","BJP4India","INCIndia","OfficeOfRG","AamAadmiParty","BSP4India","yadavakhilesh",'laluprasadrjd','NitishKumar']
     while True:
         try:
             stream.statuses.filter(track=tags)

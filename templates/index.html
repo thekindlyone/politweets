@@ -4,7 +4,8 @@
 
 
           <div class="inner cover">
-            <h2 class="cover-heading">Sentiment Analysis of Indian Politics Tweets</h1>
+            <h2 class="cover-heading">{{ count|safe }} tweets indexed</h2>
+            <h3 class="cover-heading">Sentiment Analysis of Indian Politics Tweets</h3>
             <p class="lead">
               <form id="searchform">
                 <div class="form-group" >
@@ -14,7 +15,7 @@
               </form>
             </p>           
               <div class="chart_container">
-                <!-- {{ chart | safe}}                 -->
+                {{ chart | safe}}                
               </div>
             
           </div>
