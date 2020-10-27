@@ -6,7 +6,7 @@ Unidecode==0.4.18
 Werkzeug==0.10.4
 argparse==1.2.1
 cffi==1.2.1
-cryptography==1.0
+cryptography==3.2
 decorator==4.0.2
 elasticsearch==1.6.0
 enum34==1.0.4
