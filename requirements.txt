@@ -1,6 +1,6 @@
 3to2==1.1.1
 Flask==0.10.1
-Jinja2==2.8
+Jinja2==2.11.3
 MarkupSafe==0.23
 Unidecode==0.4.18
 Werkzeug==0.10.4
