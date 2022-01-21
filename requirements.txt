@@ -13,7 +13,7 @@ enum34==1.0.4
 fuzzywuzzy==0.6.1
 idna==2.0
 ipaddress==1.0.14
-ipython==4.0.0
+ipython==7.16.3
 ipython-genutils==0.1.0
 itsdangerous==0.24
 ndg-httpsclient==0.4.0
